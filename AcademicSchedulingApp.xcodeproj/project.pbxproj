@@ -15,6 +15,8 @@
 		3CC8607F2404A2E800B4DDC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC8607D2404A2E800B4DDC2 /* LaunchScreen.storyboard */; };
 		3CC8608A2404A2E900B4DDC2 /* AcademicSchedulingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC860892404A2E900B4DDC2 /* AcademicSchedulingAppTests.swift */; };
 		3CC860952404A2E900B4DDC2 /* AcademicSchedulingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC860942404A2E900B4DDC2 /* AcademicSchedulingAppUITests.swift */; };
+		3CC860A32404BEAA00B4DDC2 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC860A22404BEAA00B4DDC2 /* LoginScreen.storyboard */; };
+		3CC860A52404C45700B4DDC2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC860A42404C45700B4DDC2 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3CC860902404A2E900B4DDC2 /* AcademicSchedulingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcademicSchedulingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC860942404A2E900B4DDC2 /* AcademicSchedulingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicSchedulingAppUITests.swift; sourceTree = "<group>"; };
 		3CC860962404A2E900B4DDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC860A22404BEAA00B4DDC2 /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
+		3CC860A42404C45700B4DDC2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				3CC8607D2404A2E800B4DDC2 /* LaunchScreen.storyboard */,
 				3CC860802404A2E800B4DDC2 /* Info.plist */,
 				3CC8607A2404A2E800B4DDC2 /* Preview Content */,
+				3CC860A22404BEAA00B4DDC2 /* LoginScreen.storyboard */,
+				3CC860A42404C45700B4DDC2 /* LoginViewController.swift */,
 			);
 			path = AcademicSchedulingApp;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			files = (
 				3CC8607F2404A2E800B4DDC2 /* LaunchScreen.storyboard in Resources */,
 				3CC8607C2404A2E800B4DDC2 /* Preview Assets.xcassets in Resources */,
+				3CC860A32404BEAA00B4DDC2 /* LoginScreen.storyboard in Resources */,
 				3CC860792404A2E800B4DDC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC860A52404C45700B4DDC2 /* LoginViewController.swift in Sources */,
 				3CC860732404A2E600B4DDC2 /* AppDelegate.swift in Sources */,
 				3CC860752404A2E600B4DDC2 /* SceneDelegate.swift in Sources */,
 				3CC860772404A2E600B4DDC2 /* ContentView.swift in Sources */,
