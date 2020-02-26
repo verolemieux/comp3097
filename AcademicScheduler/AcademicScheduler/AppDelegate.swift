@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  AcademicSchedulingApp
+//  AcademicScheduler
 //
-//  Created by Vikram Sharma on 2020-02-24.
+//  Created by Vikram Sharma on 2020-02-26.
 //  Copyright © 2020 Veronyque Lemieux. All rights reserved.
 //
 
