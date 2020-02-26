@@ -1,15 +1,15 @@
 //
-//  AcademicSchedulingAppTests.swift
-//  AcademicSchedulingAppTests
+//  AcademicSchedulerTests.swift
+//  AcademicSchedulerTests
 //
-//  Created by Vikram Sharma on 2020-02-24.
+//  Created by Vikram Sharma on 2020-02-26.
 //  Copyright © 2020 Veronyque Lemieux. All rights reserved.
 //
 
 import XCTest
-@testable import AcademicSchedulingApp
+@testable import AcademicScheduler
 
-class AcademicSchedulingAppTests: XCTestCase {
+class AcademicSchedulerTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
