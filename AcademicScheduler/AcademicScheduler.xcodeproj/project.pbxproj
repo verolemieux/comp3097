@@ -15,6 +15,10 @@
 		3CF8B29E240738FD00301D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF8B29C240738FD00301D40 /* LaunchScreen.storyboard */; };
 		3CF8B2A9240738FD00301D40 /* AcademicSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8B2A8240738FD00301D40 /* AcademicSchedulerTests.swift */; };
 		3CF8B2B4240738FD00301D40 /* AcademicSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8B2B3240738FD00301D40 /* AcademicSchedulerUITests.swift */; };
+		3CF8B2C22407404000301D40 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF8B2C12407404000301D40 /* HomeScreen.storyboard */; };
+		3CF8B2C42407415E00301D40 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8B2C32407415E00301D40 /* HomeViewController.swift */; };
+		3CF8B2C6240742B500301D40 /* CourseFormScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF8B2C5240742B500301D40 /* CourseFormScreen.storyboard */; };
+		3CF8B2C8240742CB00301D40 /* TaskFormScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF8B2C7240742CB00301D40 /* TaskFormScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		3CF8B2AF240738FD00301D40 /* AcademicSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcademicSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF8B2B3240738FD00301D40 /* AcademicSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicSchedulerUITests.swift; sourceTree = "<group>"; };
 		3CF8B2B5240738FD00301D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF8B2C12407404000301D40 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
+		3CF8B2C32407415E00301D40 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3CF8B2C5240742B500301D40 /* CourseFormScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseFormScreen.storyboard; sourceTree = "<group>"; };
+		3CF8B2C7240742CB00301D40 /* TaskFormScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskFormScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				3CF8B29A240738FD00301D40 /* Assets.xcassets */,
 				3CF8B29C240738FD00301D40 /* LaunchScreen.storyboard */,
 				3CF8B29F240738FD00301D40 /* Info.plist */,
+				3CF8B2C12407404000301D40 /* HomeScreen.storyboard */,
+				3CF8B2C32407415E00301D40 /* HomeViewController.swift */,
+				3CF8B2C5240742B500301D40 /* CourseFormScreen.storyboard */,
+				3CF8B2C7240742CB00301D40 /* TaskFormScreen.storyboard */,
 			);
 			path = AcademicScheduler;
 			sourceTree = "<group>";
@@ -233,6 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF8B29E240738FD00301D40 /* LaunchScreen.storyboard in Resources */,
+				3CF8B2C8240742CB00301D40 /* TaskFormScreen.storyboard in Resources */,
+				3CF8B2C6240742B500301D40 /* CourseFormScreen.storyboard in Resources */,
+				3CF8B2C22407404000301D40 /* HomeScreen.storyboard in Resources */,
 				3CF8B29B240738FD00301D40 /* Assets.xcassets in Resources */,
 				3CF8B299240738FB00301D40 /* Main.storyboard in Resources */,
 			);
@@ -262,6 +277,7 @@
 				3CF8B296240738FB00301D40 /* ViewController.swift in Sources */,
 				3CF8B292240738FA00301D40 /* AppDelegate.swift in Sources */,
 				3CF8B294240738FA00301D40 /* SceneDelegate.swift in Sources */,
+				3CF8B2C42407415E00301D40 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
