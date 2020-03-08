@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YFz-6g-dDW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AcademicScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="AcademicScheduler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,8 @@
                                             <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="IBOLoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4z-gx-xot"/>
+                                            <action selector="IBOLoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oX4-B5-8aR"/>
+                                            <segue destination="4vO-Dd-soV" kind="show" id="d4d-fq-702"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewo-sl-DWf">
@@ -83,6 +84,7 @@
                                         </state>
                                         <connections>
                                             <action selector="IBORegisterBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="31B-co-qz5"/>
+                                            <segue destination="eci-0t-p8g" kind="show" id="94T-Pm-uX0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39e-Kl-x4n">
@@ -103,12 +105,51 @@
                         <color key="backgroundColor" red="0.0" green="0.31937086799999997" blue="0.66276716319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aLd-NI-bKi"/>
                     <connections>
                         <outlet property="IBOPasswordTxt" destination="Obw-XI-Bjh" id="fqe-fS-jl7"/>
                         <outlet property="IBOUsernameTxt" destination="gJW-KZ-uUB" id="fB2-il-qLq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="Eti-MW-HWm">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HomeScreen" storyboardName="HomeScreen" id="4vO-Dd-soV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ek6-Hb-kSw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWd-u7-Crk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671.7391304347827" y="96.428571428571431"/>
+        </scene>
+        <!--RegisterScreen-->
+        <scene sceneID="MQc-F8-E7a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RegisterScreen" id="eci-0t-p8g" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0PE-V5-POx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93M-zp-uIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="214"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fNG-vt-Je2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YFz-6g-dDW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LnT-xn-ife">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="i2Z-xf-KUS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qpM-0b-7r3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </scene>

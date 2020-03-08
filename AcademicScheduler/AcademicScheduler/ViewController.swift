@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var IBOPasswordTxt: UITextField!
     
     @IBAction func IBOLoginBtn(_ sender: Any) {
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+//        let vc = storyboard.instantiateViewController(withIdentifier: "HomeScreen") ;
+//        self.present(vc, animated: true, completion: nil);
     }
     
     @IBAction func IBORegisterBtn(_ sender: Any) {
