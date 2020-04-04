@@ -2,7 +2,7 @@
 //  TaskFormViewController.swift
 //  AcademicScheduler
 //
-//  Copyright © 2020 Veronyque Lemieux. All rights reserved.
+//  Copyright © 2020 Veronyque Lemieux, Jeremy Thibeau, Sergio Lombana. All rights reserved.
 //
 
 import Foundation
@@ -95,7 +95,7 @@ class TaskFormViewController: UIViewController {
             TypeTextField.text = selectedTask.type;
             WeightTextField.text = String(selectedTask.weight);
             GradeTextField.text = selectedTask.grade != -1 ? String(selectedTask.grade) : "";
-            DatePicker.date = selectedTask.date;
+            DatePicker.date = selectedTask.date as Date;
             CompletedSwitch.isOn = selectedTask.complete;
             
             if (selectedTask.complete){

@@ -2,7 +2,7 @@
 //  Task.swift
 //  AcademicScheduler
 //
-//  Copyright © 2020 Veronyque Lemieux. All rights reserved.
+//  Copyright © 2020 Veronyque Lemieux, Jeremy Thibeau, Sergio Lombana. All rights reserved.
 //
 
 import Foundation
@@ -31,5 +31,5 @@ class Task {
     
     func setCourse(parentCourse: Course) {
         course = parentCourse;
-    }   
+    }
 }

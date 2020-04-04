@@ -2,7 +2,7 @@
 //  CourseFormViewController.swift
 //  AcademicScheduler
 //
-//  Copyright © 2020 Veronyque Lemieux. All rights reserved.
+//  Copyright © 2020 Veronyque Lemieux, Jeremy Thibeau, Sergio Lombana. All rights reserved.
 //
 
 import Foundation
@@ -24,6 +24,7 @@ class CourseFormViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK: Actions
     @IBAction func AddTaskButton(_ sender: UIButton) {
+        selectedTask = Task();
         self.performSegue(withIdentifier: "TaskFormSegue", sender: self)
     }
     
