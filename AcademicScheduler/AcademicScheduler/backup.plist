@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>COMP 3133</string>
+		<key>description</key>
+		<string>full stack dev</string>
+		<key>syllabus</key>
+		<string>other</string>
+		<key>grade</key>
+		<integer>0</integer>
+		<key>progress</key>
+		<integer>0</integer>
+		<key>tasks</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Lab Test 1</string>
+				<key>description</key>
+				<string>Up to Chap 2</string>
+				<key>date</key>
+				<date>2020-03-24T01:32:20Z</date>
+				<key>type</key>
+				<string>Lab Test</string>
+				<key>weight</key>
+				<integer>10</integer>
+				<key>grade</key>
+				<integer>0</integer>
+				<key>complete</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>COMP 3097</string>
+		<key>description</key>
+		<string>Mobile App Dev</string>
+		<key>syllabus</key>
+		<string>other</string>
+		<key>grade</key>
+		<integer>0</integer>
+		<key>progress</key>
+		<integer>0</integer>
+		<key>tasks</key>
+		<array/>
+	</dict>
+</array>
+</plist>
