@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  AcademicScheduler
 //
-//  Created by Vikram Sharma on 2020-02-26.
-//  Copyright © 2020 Veronyque Lemieux. All rights reserved.
+//  Copyright © 2020 Veronyque Lemieux, Jeremy Thibeau, Sergio Lombana. All rights reserved.
 //
 
 import UIKit
