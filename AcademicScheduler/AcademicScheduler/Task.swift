@@ -32,4 +32,8 @@ class Task {
     func setCourse(parentCourse: Course) {
         course = parentCourse;
     }
+    
+    func setComplete() {
+        self.complete = true;
+    }
 }

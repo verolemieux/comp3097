@@ -19,23 +19,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var courses = DataManager().getCourses();
     var currentCourse = Course();
     var tasks: [Task] = [];
-    var taskDict: [String: [Task]] = [:];
+    var taskDict: [Date : [Task]] = [:];
     var objectArr: [Objects] = [];
     
     @IBOutlet weak var HelloUserLabel: UILabel!
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var CoursesTableView: UITableView!
     @IBOutlet weak var TasksTableView: UITableView!
+    @IBOutlet weak var AddCourseButton: UIButton!
     
     // MARK: Actions
     @IBAction func ShowCoursesView(_ sender: Any) {
         CoursesTableView.isHidden = false;
         TasksTableView.isHidden = true;
+        AddCourseButton.isHidden = false;
     }
     
     @IBAction func ShowTasksView(_ sender: Any) {
         CoursesTableView.isHidden = true;
         TasksTableView.isHidden = false;
+        AddCourseButton.isHidden = true;
     }
     
     @IBAction func AddCourseButton(_ sender: UIButton) {
@@ -50,18 +53,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 tasks.append(task);
             }
         }
-        tasks.sort { (Task1, Task2) -> Bool in
-            Task1.date < Task2.date
-        }
+        
+        //tasks = tasks.sorted(by: {$0.date < $1.date});
         for task in tasks {
-            let date = getDate(date: task.date);
-            if(taskDict[date] == nil) {
-                taskDict[date] = [];
+            if(taskDict[task.date] == nil) {
+                taskDict[task.date] = [];
             }
-            taskDict[date]?.append(task);
+            taskDict[task.date]?.append(task);
         }
-        for (key, value) in taskDict {
-            objectArr.append(Objects(sectionName: key, sectionObjects: value));
+        
+        let sortedKeys = taskDict.keys.sorted(by: <);
+        for key in sortedKeys {
+            objectArr.append(Objects(sectionName: getDate(date: key), sectionObjects: taskDict[key]));
         }
     }
     
@@ -72,7 +75,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         CoursesTableView.isHidden = false;
         TasksTableView.isHidden = true;
-                
+                                
         self.navigationItem.setHidesBackButton(true, animated: false)
         HelloUserLabel.text = "Hello, Vero";
         DateLabel.text = getDayOfWeek();
@@ -107,10 +110,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var returnCell = UITableViewCell();
         if tableView == CoursesTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CourseCell", for: indexPath);
+             let cell:CustomCourseCell = tableView.dequeueReusableCell(withIdentifier: "CourseCell", for: indexPath) as! CustomCourseCell;
             let course = courses[indexPath.row]
-            cell.textLabel?.text = course.title;
-            cell.detailTextLabel?.text = String(Int(course.grade)) + "%";
+            cell.CourseTitleLabel?.text = course.title;
+            cell.CourseDescriptionLabel?.text = course.description;
+            cell.CourseGradeLabel?.text = String(Int(course.grade)) + "%";
+            cell.CourseProgressView.progress = Float(course.progress);
             returnCell = cell;
         } else if tableView == TasksTableView {
             let cell:CustomTaskCell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! CustomTaskCell;
@@ -135,10 +140,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if tableView == CoursesTableView && editingStyle == .delete {
-            courses.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
+    {
+        if tableView == CoursesTableView {
+            let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+                self.courses.remove(at: indexPath.row);
+                tableView.deleteRows(at: [indexPath], with: .fade);
+            });
+            return [deleteAction];
+        } else {
+//            let completeAction = UITableViewRowAction(style: .default, title: "Complete" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+//                self.objectArr[indexPath.section].sectionObjects[indexPath.row].complete = true;
+//            });
+//            completeAction.backgroundColor = .green;
+//            return [completeAction];
+            return nil;
         }
     }
     

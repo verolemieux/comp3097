@@ -6,9 +6,9 @@
 		<key>title</key>
 		<string>COMP 3133</string>
 		<key>description</key>
-		<string>full stack dev</string>
+		<string>Full Stack Dev II</string>
 		<key>syllabus</key>
-		<string>other</string>
+		<string></string>
 		<key>grade</key>
 		<integer>0</integer>
 		<key>progress</key>
@@ -19,13 +19,29 @@
 				<key>title</key>
 				<string>Lab Test 1</string>
 				<key>description</key>
-				<string>Up to Chap 2</string>
+				<string></string>
 				<key>date</key>
-				<date>2020-03-24T01:32:20Z</date>
+				<date>2020-04-07T18:00:00Z</date>
 				<key>type</key>
 				<string>Lab Test</string>
 				<key>weight</key>
-				<integer>10</integer>
+				<integer>15</integer>
+				<key>grade</key>
+				<integer>-1</integer>
+				<key>complete</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Midterm</string>
+				<key>description</key>
+				<string></string>
+				<key>date</key>
+				<date>2020-03-23T12:30:00Z</date>
+				<key>type</key>
+				<string>Exam</string>
+				<key>weight</key>
+				<integer>30</integer>
 				<key>grade</key>
 				<integer>-1</integer>
 				<key>complete</key>
@@ -35,11 +51,11 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>COMP 3097</string>
+		<string>COMP 3134</string>
 		<key>description</key>
-		<string>Mobile App Dev</string>
+		<string>Cyber Security</string>
 		<key>syllabus</key>
-		<string>other</string>
+		<string></string>
 		<key>grade</key>
 		<integer>0</integer>
 		<key>progress</key>

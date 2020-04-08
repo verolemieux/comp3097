@@ -19,11 +19,11 @@ class CourseFormViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var DescriptionTextField: UITextField!
     @IBOutlet weak var SyllabusTextField: UITextField!
     @IBOutlet weak var TaskTableView: UITableView!
-    @IBOutlet weak var ProgressView: UIProgressView!
     @IBOutlet weak var ErrorMessage: UILabel!
     
     // MARK: Actions
     @IBAction func AddTaskButton(_ sender: UIButton) {
+        currentCourse = saveCourse()!;
         selectedTask = Task();
         self.performSegue(withIdentifier: "TaskFormSegue", sender: self)
     }
@@ -33,30 +33,16 @@ class CourseFormViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func SaveCourseButton(_ sender: Any) {
-        let title = TitleTextField.text!;
-        let description = DescriptionTextField.text!;
-        let syllabus = SyllabusTextField.text!;
-        let tasks = currentCourse.tasks;
-        let grade = currentCourse.grade;
-        let progress = currentCourse.progress;
+        let course = saveCourse()!;
         
-        if title.isEmpty {
-            inputError = true;
-            ErrorMessage.isHidden = false;
+        let index = courses.firstIndex{$0.title == currentCourse.title}
+        if index == nil {
+            courses.append(course);
         } else {
-            inputError = false;
-            ErrorMessage.isHidden = true;
-            let course = Course(title: title, description: description, syllabus: syllabus, tasks: tasks);
-            course.updateGrade(grade: grade);
-            course.updateProgress(progress: progress);
-            
-            let index = courses.firstIndex{$0 === currentCourse}
-            if index == nil {
-                courses.append(course);
-            } else {
-                courses[index!] = course;
-            }
+            courses[index!] = course;
         }
+        
+        currentCourse = course;
         
         if shouldPerformSegue(withIdentifier: "HomeSegue", sender: self) {
             performSegue(withIdentifier: "HomeSegue", sender: self);
@@ -90,20 +76,41 @@ class CourseFormViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "New Course";
+        
         ErrorMessage.isHidden = true;
         
         self.TaskTableView.delegate = self;
         self.TaskTableView.dataSource = self;
-        
-        ProgressView.progress = 0.0;
-        ProgressView.transform = ProgressView.transform.scaledBy(x: 1, y: 5);
-        
+                
         if !currentCourse.title.isEmpty {
+            navigationItem.title = "Edit Course";
             TitleTextField.text = currentCourse.title;
             DescriptionTextField.text = currentCourse.description;
             SyllabusTextField.text = currentCourse.syllabus;
-            ProgressView.progress = Float(currentCourse.progress);
         }
+    }
+    
+    func saveCourse() -> Course? {
+        let title = TitleTextField.text!;
+        let description = DescriptionTextField.text!;
+        let syllabus = SyllabusTextField.text!;
+        let tasks = currentCourse.tasks;
+        let grade = currentCourse.grade;
+        let progress = currentCourse.progress;
+        
+        if title.isEmpty {
+            inputError = true;
+            ErrorMessage.isHidden = false;
+        } else {
+            inputError = false;
+            ErrorMessage.isHidden = true;
+            let course = Course(title: title, description: description, syllabus: syllabus, tasks: tasks);
+            course.updateGrade(grade: grade);
+            course.updateProgress(progress: progress);
+            return course;
+        }
+        return nil;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

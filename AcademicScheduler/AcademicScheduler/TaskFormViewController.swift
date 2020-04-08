@@ -85,11 +85,14 @@ class TaskFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        navigationItem.title = "New Task";
+        
         ErrorMessage.isHidden = true;
         GradeTextField.isUserInteractionEnabled = false;
         GradeTextField.backgroundColor = UIColor.lightGray;
         
         if !selectedTask.title.isEmpty {
+            navigationItem.title = "Edit Task";
             TitleTextField.text = selectedTask.title;
             DescriptionTextField.text = selectedTask.description;
             TypeTextField.text = selectedTask.type;
